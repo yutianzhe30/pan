@@ -1,0 +1,2 @@
+# Ignore downloaded interview data directories
+__pycache__/
