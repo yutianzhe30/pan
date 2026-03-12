@@ -8,13 +8,13 @@ https://www.amantuuh.socanth.cam.ac.uk/pages/browse.php
 I use Intervieewe + Interview ID as the main identifier for each interview.
 For example
 "Altangerel_080201A"
-1. visit [https://www.amantuuh.socanth.cam.ac.uk/pages/browse.php], locate the main table "Main project interviews", you can get InterviewID and Interviewee here. Also other information e.g Sex, Year of Birth, Ethnicity, Location, Interviewed by, Year Interviewed, record them maybe in json format.
+1. visit [https://www.amantuuh.socanth.cam.ac.uk/pages/browse.php], locate the main table "Main project interviews", you can get InterviewID and Interviewee here. Also other information e.g Sex, Year of Birth, Ethnicity, Location, Interviewed by, Year Interviewed, record them in JSON format in a file named `background.json`.
 2. Create a folder in format "Interviewee_Interview ID",create a subfolder "backup_html" in each
 3. Record the json in name "background.json"
 
 4. visit [https://www.amantuuh.socanth.cam.ac.uk/pages/view_summary.php?Interview=080201A](Adjust InterviewID),save the html file as summary.html under "backup_html"
-5. Extract BIO (first part of  main div, consist  of name, a photo, Basic Information, Additional Information), put BIO in "Biology.txt" line by line, the pic in Photo.jpg
-6. Extract "Summary of Interview" from the html file, put it as "Summary_EN.md". Only extract the main text part, e.g., starting from "Summary of" (or "Summary of\n\nInterview 080201A") and stopping before boilerplates like "Website Tips" or "Back to top".
+5. Extract BIO (first part of main div, consist of name, a photo, Basic Information, Additional Information), put BIO in `Biology.txt` line by line, and save the pic as `Photo.jpg` in the current interview folder.
+6. Extract "Summary of Interview" from the html file, put it as "Summary_EN.md". Only extract the main text part, e.g., starting from "Summary of" (or "Summary of\n\nInterview 080201A") and stopping right before "To read a full...". Include the "Themes" and "Alternative keywords" sections.
 
 7. Click the hyper link or just orgnizie the link to get transcript be aware transcript has two languages, English and Mongolian:
 [https://www.amantuuh.socanth.cam.ac.uk/pages/view_transcript.php?Interview=080201A&Person=990001&Transcript_Lang=EN]
