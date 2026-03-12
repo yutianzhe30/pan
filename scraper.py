@@ -55,11 +55,15 @@ def extract_bio(html_content, dir_path):
     img_tag = main_div.find('img')
     if img_tag and 'src' in img_tag.attrs:
         img_url = urljoin(f"{BASE_URL}pages/", img_tag['src'])
+        # The website HTML has a typo linking to /images/ instead of /assets/images/
+        img_url = img_url.replace("/images/", "/assets/images/")
         try:
             r_img = requests.get(img_url, timeout=10)
             if r_img.status_code == 200:
                 with open(os.path.join(dir_path, 'Photo.jpg'), 'wb') as f:
                     f.write(r_img.content)
+            else:
+                print(f"Photo not found at {img_url} (HTTP {r_img.status_code})")
         except Exception as e:
             print(f"Failed to download photo {img_url}: {e}")
             
